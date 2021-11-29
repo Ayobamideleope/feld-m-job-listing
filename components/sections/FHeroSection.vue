@@ -5,14 +5,8 @@ export default defineComponent({
   name: 'FHeroSection',
 
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    imgSrc: {
-      type: String,
-      required: true,
-    },
+    title: String,
+    imgSrc: String,
   },
 
   setup() {
@@ -23,14 +17,7 @@ export default defineComponent({
 
 <template>
   <section
-    class="
-      f-hero-section
-      position-relative
-      d-flex
-      align-center
-      justify-center
-      overflow-x-hidden
-    "
+    class="f-hero-section position-relative d-flex align-center justify-center overflow-x-hidden"
   >
     <v-img
       :src="imgSrc"
@@ -38,13 +25,7 @@ export default defineComponent({
     />
 
     <h1
-      class="
-        text-h4 text-sm-h3
-        position-relative
-        white--text
-        font-weight-bold
-        text-center
-      "
+      class="text-h4 text-sm-h3 position-relative white--text font-weight-bold text-center"
     >
       {{ title }}
     </h1>

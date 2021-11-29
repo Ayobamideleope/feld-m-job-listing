@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, toRefs } from '#app'
+import { defineComponent, reactive, computed, toRefs } from '#app'
 import FJobCard from './FJobCard.vue'
 import { mdiChevronLeft, mdiChevronRight, mdiFilter } from '@mdi/js'
 
@@ -11,10 +11,7 @@ export default defineComponent({
   },
 
   props: {
-    offers: {
-      type: Array,
-      required: true,
-    },
+    offers: Array,
   },
 
   setup({ offers }) {
@@ -37,6 +34,11 @@ export default defineComponent({
     }
     const formerPage = () => {
       if (dataIteratorOptions.page - 1 >= 1) dataIteratorOptions.page -= 1
+    }
+
+    interface Offer {
+      title: 'Offer'
+      description: 'Offer description'
     }
 
     return {

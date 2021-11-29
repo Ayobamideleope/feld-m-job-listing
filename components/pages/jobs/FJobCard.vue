@@ -6,30 +6,12 @@ export default defineComponent({
   name: 'FJobCard',
 
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    department: {
-      type: String,
-      required: true,
-    },
-    location: {
-      type: String,
-      required: true,
-    },
-    isRemote: {
-      type: Boolean,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    link: {
-      type: String,
-      required: true,
-    },
+    title: String,
+    department: String,
+    location: String,
+    isRemote: Boolean,
+    description: String,
+    link: String,
   },
 
   setup() {
