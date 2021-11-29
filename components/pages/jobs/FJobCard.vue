@@ -48,7 +48,12 @@ export default defineComponent({
           />
         </v-layout>
 
-        <p class="f-job-card__location-remote primary--text mb-0">Remote</p>
+        <p
+          v-if="isRemote"
+          class="f-job-card__location-remote primary--text mb-0"
+        >
+          Remote
+        </p>
       </v-layout>
 
       <p
